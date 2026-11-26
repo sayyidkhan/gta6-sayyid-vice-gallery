@@ -1,0 +1,16 @@
+# Sayyid Edition
+
+> An unofficial GTA VI fan-art gallery starring Sayyid Khan, with a Singapore Missions collection set around Singapore.
+
+Each wallpaper has a full-resolution PNG and a WebP thumbnail. The gallery viewer supports individual PNG downloads. The Download all button creates a ZIP of the complete collection in the browser.
+
+## Gallery
+
+- [Live gallery](https://sayyid-vice-gallery.promptalchemistlabs.chatgpt.site/) — browse all wallpapers.
+- [Singapore Missions](https://sayyid-vice-gallery.promptalchemistlabs.chatgpt.site/#singapore-missions) — open the Singapore collection, including Changi Getaway, Singapore Grand Prix, and Jurong Afterburn.
+- [Artwork catalog](https://sayyid-vice-gallery.promptalchemistlabs.chatgpt.site/gallery.js) — titles, collection names, and paths for each PNG and thumbnail. Resolve paths against the live gallery root.
+
+## Project
+
+- [README](https://raw.githubusercontent.com/sayyidkhan/gta6-sayyid-vice-gallery/main/README.md) — gallery features, local setup, and file layout.
+- [Source repository](https://github.com/sayyidkhan/gta6-sayyid-vice-gallery) — site source and wallpaper assets.
