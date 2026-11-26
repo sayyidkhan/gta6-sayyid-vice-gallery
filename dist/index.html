@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Sayyid Edition</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#151119;color:#fff4ec;font:16px/1.45 "Helvetica Neue",Arial,sans-serif}header,main,footer{width:min(1460px,92%);margin:auto}header{height:76px;display:flex;align-items:center;justify-content:space-between}header strong{letter-spacing:-1.4px;font-size:23px}header strong i{color:#fa9caa}header span,footer{color:#c5b7c6}.hero{position:relative;min-height:420px;height:61vh;max-height:650px;overflow:hidden;border-radius:12px;background:#4b3049}.hero img{width:100%;height:100%;position:absolute;object-fit:cover;object-position:center 35%}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#170d21ec,transparent 75%),linear-gradient(0deg,#21142475,transparent 40%)}.intro{position:absolute;bottom:9%;left:5%;z-index:1}.intro small{font-weight:700;letter-spacing:.18em;color:#ffb9ad}h1{font:italic 900 clamp(3.8rem,8vw,8rem)/.87 Georgia,serif;letter-spacing:-.075em;margin:.18em 0 .25em}.intro p{margin:0;font-size:18px}.bar{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin:45px 0 22px}h2{font-size:30px;letter-spacing:-1.5px;margin:0}nav{display:flex;gap:4px;flex-wrap:wrap}button,a.btn{font:inherit;cursor:pointer;color:inherit;background:#28212c;border:0;border-radius:24px;padding:8px 15px;text-decoration:none}nav button[aria-pressed=true],a.btn{background:#ffb5a0;color:#24151d}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px}.card{border-radius:0;text-align:left;padding:0;background:none}.card img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:7px;display:block;background:#312833}.card:first-child img{object-position:center}.card b{display:block;margin-top:9px;font-size:18px}.card:hover b{color:#ffbaa8}footer{border-top:1px solid #443944;margin:42px auto 0;padding:22px 0 30px;font-size:14px}dialog{color:inherit;background:#19141e;border:1px solid #493c48;border-radius:12px;width:min(1050px,96vw);padding:14px}dialog::backdrop{background:#08060aeb}dialog img{width:100%;height:65vh;object-fit:contain}dialog section{display:flex;align-items:center;gap:8px;flex-wrap:wrap}dialog h3{flex:1;margin:6px}button:focus-visible,a:focus-visible{outline:3px solid #f2acff}@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.hero{height:51vh}.hero img{object-position:55% center}}@media(max-width:550px){header{height:58px}.hero{min-height:360px}.hero:after{background:linear-gradient(0deg,#190d23ed,transparent 85%)}.grid{grid-template-columns:1fr}.bar{margin-top:30px}dialog img{height:47vh}}
+header{gap:16px}header span{margin-left:auto}#downloadAll{white-space:nowrap;min-height:44px}@media(max-width:600px){header span{display:none}header{gap:8px}#downloadAll{margin-left:auto;font-size:.875rem;padding:8px 12px}}
+.viewer{position:relative}.viewer img{display:block}.step{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;padding:0;background:#19141ed9;color:white;border:1px solid #ffffff70;font:30px/1 Arial,sans-serif}.step:hover{background:#332735}.step.prev{left:8px}.step.next{right:8px}
+</style><header><strong>VICE<i> GALLERY</i></strong><span>Sayyid Khan</span><button id="downloadAll" style="background:#ffb5a0;color:#24151d">Download all 30 · ZIP</button></header><main><section class="hero"><img src="art/09-Jason-and-Lucia-01.webp" alt="Sayyid and Lucia on a muscle car at sunset"><div class="intro"><small>GTA VI FAN ART</small><h1 style="font-size:clamp(2.7rem,6.5vw,6.6rem)">Sayyid Edition</h1><p>30 fan-made wallpapers starring Sayyid Khan.</p></div></section><div class="bar"><h2>The collection</h2><nav aria-label="Filter artwork"></nav></div><div class="grid"></div></main><footer>Personal fan art inspired by Rockstar Games’ Grand Theft Auto VI.</footer><dialog aria-labelledby="artTitle"><div class="viewer"><img id="full" alt="">
+<button class="step prev" aria-label="Previous wallpaper">‹</button>
+<button class="step next" aria-label="Next wallpaper">›</button></div><section><h3 id="artTitle" aria-live="polite"></h3><a class="btn" download>Download PNG</a><button id="close">Close</button></section></dialog><script src="gallery.js"></script><script>
+const grid=document.querySelector('.grid'),nav=document.querySelector('nav'),modal=document.querySelector('dialog');
+let visibleWorks = [];
+let currentIndex = 0;
+function showArt(index) {
+  currentIndex = (index + visibleWorks.length) % visibleWorks.length;
+  const work = visibleWorks[currentIndex];
+  const picture = modal.querySelector('img');
+  picture.src = work.img;
+  picture.alt = work.title;
+  modal.querySelector('h3').textContent = work.title;
+  modal.querySelector('a').href = work.img;
+}
+modal.querySelector('.prev').onclick = () => showArt(currentIndex - 1);
+modal.querySelector('.next').onclick = () => showArt(currentIndex + 1);
+modal.addEventListener('keydown', event => {
+  if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+  event.preventDefault();
+  showArt(currentIndex + (event.key === 'ArrowLeft' ? -1 : 1));
+});
+function filter(tag){for(const b of nav.children)b.setAttribute('aria-pressed',b.textContent===tag);grid.replaceChildren();
+visibleWorks = works.filter(w => tag === 'All' || w.category === tag);
+for(const [index,w] of visibleWorks.entries()){const b=document.createElement('button'),img=document.createElement('img'),title=document.createElement('b');b.className='card';img.loading='lazy';img.src=w.thumb;img.alt='';title.textContent=w.title;b.append(img,title);b.onclick=()=>{showArt(index);modal.showModal()};grid.append(b)}}
+for(const tag of ['All','Singapore Missions','Key art','Portraits','Places']){const b=document.createElement('button');b.textContent=tag;b.onclick=()=>filter(tag);nav.append(b)}filter(location.hash==='#singapore-missions'?'Singapore Missions':'All');document.querySelector('#close').onclick=()=>modal.close();modal.onclick=e=>{if(e.target===modal)modal.close()};
+</script><script src="archive.js"></script></html>
