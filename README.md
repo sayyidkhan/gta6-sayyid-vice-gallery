@@ -6,8 +6,8 @@ A GTA VI fan-art gallery featuring Sayyid Khan across 33 wallpapers. The Singapo
 
 | Vice City key art | Singapore Missions |
 | --- | --- |
-| [![Sayyid and Lucia on a muscle car at sunset](dist/art/09-Jason-and-Lucia-01.webp)](dist/art/09-Jason-and-Lucia-01.png) | [![Sayyid outside a karaoke club beneath a neon koi sign](dist/art/33-Last-Song-at-Koi-Club.webp)](dist/art/33-Last-Song-at-Koi-Club.png) |
-| *Jason and Lucia 01* | *Last Song at Koi Club* |
+| [![Custom Vice City Cover featuring Sayyid Khan](dist/art/06-Custom-Vice-City-Cover.webp)](dist/art/06-Custom-Vice-City-Cover.png) | [![Sayyid outside a karaoke club beneath a neon koi sign](dist/art/33-Last-Song-at-Koi-Club.webp)](dist/art/33-Last-Song-at-Koi-Club.png) |
+| *Custom Vice City Cover* | *Last Song at Koi Club* |
 
 ## Browse and download
 
