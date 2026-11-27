@@ -4,6 +4,11 @@ A GTA VI fan-art gallery featuring Sayyid Khan across 33 wallpapers. The Singapo
 
 [Live gallery](https://sayyid-vice-gallery.promptalchemistlabs.chatgpt.site/) · [Singapore Missions](https://sayyid-vice-gallery.promptalchemistlabs.chatgpt.site/#singapore-missions) · [Project repository](https://github.com/sayyidkhan/gta6-sayyid-vice-gallery)
 
+| Vice City key art | Singapore Missions |
+| --- | --- |
+| [![Sayyid and Lucia on a muscle car at sunset](dist/art/09-Jason-and-Lucia-01.webp)](dist/art/09-Jason-and-Lucia-01.png) | [![Sayyid outside a karaoke club beneath a neon koi sign](dist/art/33-Last-Song-at-Koi-Club.webp)](dist/art/33-Last-Song-at-Koi-Club.png) |
+| *Jason and Lucia 01* | *Last Song at Koi Club* |
+
 ## Browse and download
 
 Choose a collection and open a wallpaper. Use the on-screen arrows or your keyboard’s left and right arrow keys to browse within that collection. Select **Download PNG** to save the current wallpaper, or **Download all** in the gallery header to save the full collection as a ZIP.
