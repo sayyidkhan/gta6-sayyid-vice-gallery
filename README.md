@@ -1,6 +1,6 @@
 # Sayyid Edition
 
-A GTA VI fan-art gallery featuring Sayyid Khan across 32 wallpapers. The Singapore Missions collection reimagines familiar places in Singapore, from a cockpit at Changi Airport to a night race at the Singapore Grand Prix.
+A GTA VI fan-art gallery featuring Sayyid Khan across 33 wallpapers. The Singapore Missions collection reimagines familiar places in Singapore, from a cockpit at Changi Airport to a night race at the Singapore Grand Prix.
 
 [Live gallery](https://sayyid-vice-gallery.promptalchemistlabs.chatgpt.site/) · [Singapore Missions](https://sayyid-vice-gallery.promptalchemistlabs.chatgpt.site/#singapore-missions) · [Project repository](https://github.com/sayyidkhan/gta6-sayyid-vice-gallery)
 
